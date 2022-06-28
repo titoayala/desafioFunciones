@@ -18,7 +18,10 @@ document.addEventListener('keydown', function (event) {
 })
 
 cambiaColor = function (cuadro) {
-    cuadro.style.backgroundColor = colorElegido;
+    if (colorElegido === "Ninguno"){
+        cuadro.style.backgroundColor = "transparent"; //No logré que vuelva a su color original!. Mientras investigo, le quito el color.
+    }else
+        cuadro.style.backgroundColor = colorElegido;
 }
 
 cuadroUno.addEventListener('click', function(){
